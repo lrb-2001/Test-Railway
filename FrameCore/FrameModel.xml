@@ -1,0 +1,905 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FrameModel</name>
+    </assembly>
+    <members>
+        <member name="T:FrameModel.FrameCoreAgileConfig">
+            <summary>
+            FrameCore组模型
+            </summary>
+        </member>
+        <member name="P:FrameModel.FrameCoreAgileConfig.baseConfig">
+            <summary>
+            基础配置
+            </summary>
+        </member>
+        <member name="P:FrameModel.FrameCoreAgileConfig.connectionConfig">
+            <summary>
+            连接字符串配置
+            </summary>
+        </member>
+        <member name="P:FrameModel.FrameCoreAgileConfig.externalUrl">
+            <summary>
+            外部地址配置
+            </summary>
+        </member>
+        <member name="P:FrameModel.FrameCoreAgileConfig.weiXinMPConfig">
+            <summary>
+            微信公众号配置
+            </summary>
+        </member>
+        <member name="P:FrameModel.FrameCoreAgileConfig.openAIConfig">
+            <summary>
+            OpenAI配置
+            </summary>
+        </member>
+        <member name="T:FrameModel.BaseConfig">
+            <summary>
+            基础配置
+            </summary>
+        </member>
+        <member name="T:FrameModel.ConnectionConfig">
+            <summary>
+            连接字符串配置
+            </summary>
+        </member>
+        <member name="P:FrameModel.ConnectionConfig.RedisCon">
+            <summary>
+            Redis连接字符串
+            </summary>
+        </member>
+        <member name="P:FrameModel.ConnectionConfig.MongoDBCon">
+            <summary>
+            mongoDB连接字符串
+            </summary>
+        </member>
+        <member name="P:FrameModel.ConnectionConfig.frameCon">
+            <summary>
+            SqlServer Frame库连接字符串
+            </summary>
+        </member>
+        <member name="T:FrameModel.ExternalUrl">
+            <summary>
+            外部地址配置
+            </summary>
+        </member>
+        <member name="P:FrameModel.ExternalUrl.GdKey">
+            <summary>
+            高德接口的Key
+            </summary>
+        </member>
+        <member name="P:FrameModel.ExternalUrl.GdAddressByLocation">
+            <summary>
+            高德接口 -- 经纬度转地址
+            </summary>
+        </member>
+        <member name="P:FrameModel.ExternalUrl.OneWord">
+            <summary>
+            一言接口 -- 一句话
+            </summary>
+        </member>
+        <member name="P:FrameModel.ExternalUrl.WeekWeather">
+            <summary>
+            天气接口  --  一周的天气
+            </summary>
+        </member>
+        <member name="P:FrameModel.ExternalUrl.OneVerse">
+            <summary>
+            一句诗
+            </summary>
+        </member>
+        <member name="T:FrameModel.WeiXinMPConfig">
+            <summary>
+            微信公众号配置
+            </summary>
+        </member>
+        <member name="P:FrameModel.WeiXinMPConfig.AppId">
+            <summary>
+            AppId
+            </summary>
+        </member>
+        <member name="P:FrameModel.WeiXinMPConfig.AppSecret">
+            <summary>
+            AppSecret
+            </summary>
+        </member>
+        <member name="P:FrameModel.WeiXinMPConfig.TimedNotifKey">
+            <summary>
+            定时通知模板Key
+            </summary>
+        </member>
+        <member name="P:FrameModel.WeiXinMPConfig.AccessTokenUrl">
+            <summary>
+            获取AccessToken的url
+            </summary>
+        </member>
+        <member name="P:FrameModel.WeiXinMPConfig.SendTemplateUrl">
+            <summary>
+            推送消息的url
+            </summary>
+        </member>
+        <member name="P:FrameModel.WeiXinMPConfig.CreateTicketUrl">
+            <summary>
+            获取Ticke的url
+            </summary>
+        </member>
+        <member name="P:FrameModel.WeiXinMPConfig.UserInfoUrl">
+            <summary>
+            获取用户信息的url
+            </summary>
+        </member>
+        <member name="P:FrameModel.WeiXinMPConfig.SceneCodeUrl">
+            <summary>
+            获取场景二维码的url
+            </summary>
+        </member>
+        <member name="T:FrameModel.OpenAIConfig">
+            <summary>
+            OpenAI配置
+            </summary>
+        </member>
+        <member name="P:FrameModel.OpenAIConfig.OpenAiKey">
+            <summary>
+            OpenAiKey
+            </summary>
+        </member>
+        <member name="P:FrameModel.OpenAIConfig.OpenAiCompletionsUrl">
+            <summary>
+            OpenAI对话Url
+            </summary>
+        </member>
+        <member name="P:FrameModel.OpenAIConfig.OpenAiImageUrl">
+            <summary>
+            OpenAI图片Url
+            </summary>
+        </member>
+        <member name="T:FrameModel.GlobalConfig">
+            <summary>
+            AgileConfig全局配置
+            </summary>
+        </member>
+        <member name="P:FrameModel.GlobalConfig.frameCoreAgileConfig">
+            <summary>
+            FrameCore组配置
+            </summary>
+        </member>
+        <member name="F:FrameModel.ConfigConst.BaseConfig">
+            <summary>
+            基础配置
+            </summary>
+        </member>
+        <member name="F:FrameModel.ConfigConst.ConnectionConfig">
+            <summary>
+            连接字符串配置
+            </summary>
+        </member>
+        <member name="F:FrameModel.ConfigConst.ExternalUrl">
+            <summary>
+            外部地址配置
+            </summary>
+        </member>
+        <member name="F:FrameModel.ConfigConst.WeixinMPConfig">
+            <summary>
+            微信公众号配置
+            </summary>
+        </member>
+        <member name="F:FrameModel.ConfigConst.OpenAIConfig">
+            <summary>
+            OpenAI配置
+            </summary>
+        </member>
+        <member name="F:FrameModel.FrameConst.HttpParaKey_Token">
+            <summary>
+            默认登录
+            </summary>
+        </member>
+        <member name="F:FrameModel.FrameConst.Developer">
+            <summary>
+            调试登录
+            </summary>
+        </member>
+        <member name="P:FrameModel.ConsulOption.IP">
+            <summary>
+            当前应用IP
+            </summary>
+        </member>
+        <member name="P:FrameModel.ConsulOption.Port">
+            <summary>
+            当前应用端口
+            </summary>
+        </member>
+        <member name="P:FrameModel.ConsulOption.ServiceName">
+            <summary>
+            当前服务名称
+            </summary>
+        </member>
+        <member name="P:FrameModel.ConsulOption.ConsulIP">
+            <summary>
+            Consul集群IP
+            </summary>
+        </member>
+        <member name="P:FrameModel.ConsulOption.ConsulPort">
+            <summary>
+            Consul集群端口
+            </summary>
+        </member>
+        <member name="P:FrameModel.ConsulOption.LBStrategy">
+            <summary>
+            负载均衡策略
+            </summary>
+        </member>
+        <member name="P:FrameModel.ConsulOption.Weight">
+            <summary>
+            权重
+            </summary>
+        </member>
+        <member name="T:FrameModel.GDAddress">
+            <summary>
+            高德地图API返回的地址类
+            </summary>
+        </member>
+        <member name="P:FrameModel.GDAddress.status">
+            <summary>
+            返回结果状态值  返回值为 0 或 1，0 表示请求失败；1 表示请求成功。
+            </summary>
+        </member>
+        <member name="P:FrameModel.GDAddress.regeocode">
+            <summary>
+            逆地理编码列表
+            </summary>
+        </member>
+        <member name="P:FrameModel.GDAddress.info">
+            <summary>
+            返回状态说明  当 status 为 0 时，info 会返回具体错误原因，否则返回“OK”。
+            </summary>
+        </member>
+        <member name="P:FrameModel.GDAddress.infoCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FrameModel.Regeocode.addressComponent">
+            <summary>
+            地址元素列表
+            </summary>
+        </member>
+        <member name="P:FrameModel.Regeocode.formatted_address">
+            <summary>
+            详细地址
+            </summary>
+        </member>
+        <member name="P:FrameModel.AddressComponent.city">
+            <summary>
+            坐标点所在城市名称
+            </summary>
+        </member>
+        <member name="P:FrameModel.AddressComponent.province">
+            <summary>
+            坐标点所在省名称
+            </summary>
+        </member>
+        <member name="P:FrameModel.AddressComponent.adcode">
+            <summary>
+            行政区编码
+            </summary>
+        </member>
+        <member name="P:FrameModel.AddressComponent.district">
+            <summary>
+            坐标点所在区
+            </summary>
+        </member>
+        <member name="P:FrameModel.AddressComponent.towncode">
+            <summary>
+            乡镇街道编码
+            </summary>
+        </member>
+        <member name="P:FrameModel.AddressComponent.streetNumber">
+            <summary>
+            门牌信息列表
+            </summary>
+        </member>
+        <member name="P:FrameModel.AddressComponent.country">
+            <summary>
+            国家
+            </summary>
+        </member>
+        <member name="P:FrameModel.AddressComponent.township">
+            <summary>
+            坐标点所在乡镇/街道（此街道为社区街道，不是道路信息）
+            </summary>
+        </member>
+        <member name="P:FrameModel.AddressComponent.businessAreas">
+            <summary>
+            经纬度所属商圈列表
+            </summary>
+        </member>
+        <member name="P:FrameModel.AddressComponent.building">
+            <summary>
+            楼信息列表
+            </summary>
+        </member>
+        <member name="P:FrameModel.AddressComponent.neighborhood">
+            <summary>
+            社区信息列表
+            </summary>
+        </member>
+        <member name="P:FrameModel.AddressComponent.citycode">
+            <summary>
+            城市编码
+            </summary>
+        </member>
+        <member name="P:FrameModel.Neighborhood.name">
+            <summary>
+            社区名称
+            </summary>
+        </member>
+        <member name="P:FrameModel.Neighborhood.type">
+            <summary>
+            POI类型
+            </summary>
+        </member>
+        <member name="P:FrameModel.Building.name">
+            <summary>
+            建筑名称
+            </summary>
+        </member>
+        <member name="P:FrameModel.Building.type">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:FrameModel.BusinessAreasItem.location">
+            <summary>
+            商圈中心点经纬度
+            </summary>
+        </member>
+        <member name="P:FrameModel.BusinessAreasItem.name">
+            <summary>
+            商圈名称  例如：颐和园 
+            </summary>
+        </member>
+        <member name="P:FrameModel.BusinessAreasItem.id">
+            <summary>
+             商圈所在区域的adcode 例如：朝阳区/海淀区 
+            </summary>
+        </member>
+        <member name="P:FrameModel.StreetNumber.number">
+            <summary>
+            门牌号
+            </summary>
+        </member>
+        <member name="P:FrameModel.StreetNumber.location">
+            <summary>
+            坐标点
+            </summary>
+        </member>
+        <member name="P:FrameModel.StreetNumber.direction">
+            <summary>
+            方向
+            </summary>
+        </member>
+        <member name="P:FrameModel.StreetNumber.distance">
+            <summary>
+            门牌地址到请求坐标的距离
+            </summary>
+        </member>
+        <member name="P:FrameModel.StreetNumber.street">
+            <summary>
+            街道名称
+            </summary>
+        </member>
+        <member name="T:FrameModel.UserInfo">
+            <summary>
+            用户表
+            </summary>
+        </member>
+        <member name="M:FrameModel.UserInfo.#ctor">
+            <summary>
+            用户表
+            </summary>
+        </member>
+        <member name="P:FrameModel.UserInfo.ID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:FrameModel.UserInfo.NickName">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:FrameModel.UserInfo.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:FrameModel.UserInfo.Photo">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:FrameModel.UserInfo.UserName">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:FrameModel.UserInfo.Sex">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:FrameModel.UserInfo.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:FrameModel.UserInfo.Province">
+            <summary>
+            省
+            </summary>
+        </member>
+        <member name="P:FrameModel.UserInfo.City">
+            <summary>
+            市
+            </summary>
+        </member>
+        <member name="P:FrameModel.UserInfo.County">
+            <summary>
+            县
+            </summary>
+        </member>
+        <member name="P:FrameModel.UserInfo.Address">
+            <summary>
+            详细地址
+            </summary>
+        </member>
+        <member name="P:FrameModel.UserInfo.Phone">
+            <summary>
+            电话
+            </summary>
+        </member>
+        <member name="P:FrameModel.UserInfo.RoleType">
+            <summary>
+            角色类型
+            </summary>
+        </member>
+        <member name="P:FrameModel.UserInfo.RoleName">
+            <summary>
+            角色名称
+            </summary>
+        </member>
+        <member name="P:FrameModel.UserInfo.IsOnline">
+            <summary>
+            是否在线
+            </summary>
+        </member>
+        <member name="P:FrameModel.UserInfo.Disabled">
+            <summary>
+            是否禁用
+            </summary>
+        </member>
+        <member name="P:FrameModel.UserInfo.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:FrameModel.UserInfo.UpdateTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:FrameModel.UserInfo.Openid">
+            <summary>
+            Openid
+            </summary>
+        </member>
+        <member name="T:FrameModel.UserThirdInfo">
+            <summary>
+            第三方信息表
+            </summary>
+        </member>
+        <member name="M:FrameModel.UserThirdInfo.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FrameModel.UserThirdInfo.ID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:FrameModel.UserThirdInfo.UserID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:FrameModel.UserThirdInfo.ThirdValue">
+            <summary>
+            第三方系统
+            </summary>
+        </member>
+        <member name="P:FrameModel.UserThirdInfo.Identity1">
+            <summary>
+            标志1
+            </summary>
+        </member>
+        <member name="P:FrameModel.UserThirdInfo.Identity2">
+            <summary>
+            标志2
+            </summary>
+        </member>
+        <member name="P:FrameModel.UserThirdInfo.Identity3">
+            <summary>
+            标志3
+            </summary>
+        </member>
+        <member name="P:FrameModel.UserThirdInfo.Identity4">
+            <summary>
+            标志4
+            </summary>
+        </member>
+        <member name="P:FrameModel.UserThirdInfo.Identity5">
+            <summary>
+            标志5
+            </summary>
+        </member>
+        <member name="P:FrameModel.UserThirdInfo.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:FrameModel.UserThirdInfo.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:FrameModel.UserThirdInfo.OpenID">
+            <summary>
+            OpenID
+            </summary>
+        </member>
+        <member name="T:FrameModel.msgBody">
+            <summary>
+            公众号消息体
+            </summary>
+        </member>
+        <member name="P:FrameModel.msgBody.value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="P:FrameModel.msgBody.color">
+            <summary>
+            颜色
+            </summary>
+        </member>
+        <member name="P:FrameModel.SceneCodeRes.SceneValue">
+            <summary>
+            场景值
+            </summary>
+        </member>
+        <member name="P:FrameModel.SceneCodeRes.Code">
+            <summary>
+            二维码
+            </summary>
+        </member>
+        <member name="T:FrameModel.TicketDTO">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FrameModel.TicketDTO.ticket">
+            <summary>
+            ticket
+            </summary>
+        </member>
+        <member name="P:FrameModel.TicketDTO.expire_seconds">
+            <summary>
+            expire_seconds
+            </summary>
+        </member>
+        <member name="P:FrameModel.TicketDTO.url">
+            <summary>
+            二维码地址
+            </summary>
+        </member>
+        <member name="P:FrameModel.WXAccessToken.access_token">
+            <summary>
+            access_token
+            </summary>
+        </member>
+        <member name="P:FrameModel.WXAccessToken.expires_in">
+            <summary>
+            过期时间
+            </summary>
+        </member>
+        <member name="P:FrameModel.WXLocation.Latitude">
+            <summary>
+            纬度
+            </summary>
+        </member>
+        <member name="P:FrameModel.WXLocation.Longitude">
+            <summary>
+            经度
+            </summary>
+        </member>
+        <member name="P:FrameModel.WXLocation.Precision">
+            <summary>
+            精度
+            </summary>
+        </member>
+        <member name="P:FrameModel.WXOauth.access_token">
+            <summary>
+            网页授权接口调用凭证,注意：此access_token与基础支持的access_token不同
+            </summary>
+        </member>
+        <member name="P:FrameModel.WXOauth.expires_in">
+            <summary>
+            access_token接口调用凭证超时时间，单位（秒）
+            </summary>
+        </member>
+        <member name="P:FrameModel.WXOauth.refresh_token">
+            <summary>
+            用户刷新access_token
+            </summary>
+        </member>
+        <member name="P:FrameModel.WXOauth.openid">
+            <summary>
+            用户唯一标识，请注意，在未关注公众号时，用户访问公众号的网页，也会产生一个用户和公众号唯一的OpenID
+            </summary>
+        </member>
+        <member name="P:FrameModel.WXOauth.scope">
+            <summary>
+            用户授权的作用域，使用逗号（,）分隔
+            </summary>
+        </member>
+        <member name="P:FrameModel.WXOauth.is_snapshotuser">
+            <summary>
+            是否为快照页模式虚拟账号，只有当用户是快照页模式虚拟账号时返回，值为1
+            </summary>
+        </member>
+        <member name="P:FrameModel.WXResultBase.ToUserName">
+            <summary>
+            开发者微信号
+            </summary>
+        </member>
+        <member name="P:FrameModel.WXResultBase.FromUserName">
+            <summary>
+            发送方帐号（一个OpenID）
+            </summary>
+        </member>
+        <member name="P:FrameModel.WXResultBase.CreateTime">
+            <summary>
+            消息创建时间 （整型）
+            </summary>
+        </member>
+        <member name="P:FrameModel.WXResultBase.MsgType">
+            <summary>
+            消息类型，event 判断是否关注
+            </summary>
+        </member>
+        <member name="P:FrameModel.WXResultBase.Event">
+            <summary>
+            事件类型
+            </summary>
+        </member>
+        <member name="P:FrameModel.WXSubscribe.EventKey">
+            <summary>
+            事件KEY值，qrscene_为前缀，后面为二维码的参数值
+            </summary>
+        </member>
+        <member name="P:FrameModel.WXSubscribe.Ticket">
+            <summary>
+            二维码的ticket，可用来换取二维码图片
+            </summary>
+        </member>
+        <member name="P:FrameModel.WXUserInfo.openid">
+            <summary>
+            用户的唯一标识
+            </summary>
+        </member>
+        <member name="P:FrameModel.WXUserInfo.nickname">
+            <summary>
+            用户昵称
+            </summary>
+        </member>
+        <member name="P:FrameModel.WXUserInfo.sex">
+            <summary>
+            用户的性别，值为1时是男性，值为2时是女性，值为0时是未知
+            </summary>
+        </member>
+        <member name="P:FrameModel.WXUserInfo.province">
+            <summary>
+            用户个人资料填写的省份
+            </summary>
+        </member>
+        <member name="P:FrameModel.WXUserInfo.city">
+            <summary>
+            普通用户个人资料填写的城市
+            </summary>
+        </member>
+        <member name="P:FrameModel.WXUserInfo.country">
+            <summary>
+            国家，如中国为CN
+            </summary>
+        </member>
+        <member name="P:FrameModel.WXUserInfo.headimgurl">
+            <summary>
+            用户头像，最后一个数值代表正方形头像大小（有0、46、64、96、132数值可选，0代表640*640正方形头像），用户没有头像时该项为空。若用户更换头像，原有头像 URL 将失效。
+            </summary>
+        </member>
+        <member name="P:FrameModel.WXUserInfo.privilege">
+            <summary>
+            用户特权信息，json 数组，如微信沃卡用户为（chinaunicom）
+            </summary>
+        </member>
+        <member name="P:FrameModel.WXUserInfo.unionid">
+            <summary>
+            只有在用户将公众号绑定到微信开放平台帐号后，才会出现该字段。
+            </summary>
+        </member>
+        <member name="M:FrameModel.EnumExpand.GetTypeName(System.Enum)">
+            <summary>
+            获取枚举字段的返回备注
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:FrameModel.RemarkAttribute.remarks">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="M:FrameModel.RemarkAttribute.GetRemarks">
+            <summary>
+            返回备注
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:FrameModel.LogModel.ID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:FrameModel.LogModel.Message">
+            <summary>
+            日志内容
+            </summary>
+        </member>
+        <member name="P:FrameModel.LogModel.LogType">
+            <summary>
+            日志类型
+            </summary>
+        </member>
+        <member name="P:FrameModel.LogModel.LoggerName">
+            <summary>
+            日志名称
+            </summary>
+        </member>
+        <member name="P:FrameModel.LogModel.ClassName">
+            <summary>
+            类名
+            </summary>
+        </member>
+        <member name="P:FrameModel.LogModel.Domain">
+            <summary>
+            位置
+            </summary>
+        </member>
+        <member name="P:FrameModel.LogModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:FrameModel.PageInfoModel`1.Page">
+            <summary>
+            当前页标
+            </summary>
+        </member>
+        <member name="P:FrameModel.PageInfoModel`1.PageCount">
+            <summary>
+            总页数
+            </summary>
+        </member>
+        <member name="P:FrameModel.PageInfoModel`1.DataCount">
+            <summary>
+            数据总数
+            </summary>
+        </member>
+        <member name="P:FrameModel.PageInfoModel`1.PageSize">
+            <summary>
+            每页大小
+            </summary>
+        </member>
+        <member name="P:FrameModel.PageInfoModel`1.Data">
+            <summary>
+            返回数据
+            </summary>
+        </member>
+        <member name="T:FrameModel.ResultModel`1">
+            <summary>
+            通用返回类
+            </summary>
+        </member>
+        <member name="P:FrameModel.ResultModel`1.Status">
+            <summary>
+            状态码
+            </summary>
+        </member>
+        <member name="P:FrameModel.ResultModel`1.Success">
+            <summary>
+            操作是否成功
+            </summary>
+        </member>
+        <member name="P:FrameModel.ResultModel`1.Msg">
+            <summary>
+            返回信息
+            </summary>
+        </member>
+        <member name="P:FrameModel.ResultModel`1.Data">
+            <summary>
+            返回数据集合
+            </summary>
+        </member>
+        <member name="P:FrameModel.SqlSugar.MutiDBOperate.Enabled">
+            <summary>
+            连接启用开关
+            </summary>
+        </member>
+        <member name="P:FrameModel.SqlSugar.MutiDBOperate.ConnId">
+            <summary>
+            连接ID
+            </summary>
+        </member>
+        <member name="P:FrameModel.SqlSugar.MutiDBOperate.HitRate">
+            <summary>
+            权重比，越大越执行的次数越多
+            </summary>
+        </member>
+        <member name="P:FrameModel.SqlSugar.MutiDBOperate.Connection">
+            <summary>
+            连接字符串
+            </summary>
+        </member>
+        <member name="P:FrameModel.SqlSugar.MutiDBOperate.IsAutoCloseConnection">
+            <summary>
+            自动关闭连接
+            </summary>
+        </member>
+        <member name="P:FrameModel.SqlSugar.MutiDBOperate.DbType">
+            <summary>
+            数据库类型
+            </summary>
+        </member>
+        <member name="P:FrameModel.TokenInfoModel.Success">
+            <summary>
+            是否成功
+            </summary>
+        </member>
+        <member name="P:FrameModel.TokenInfoModel.Token">
+            <summary>
+            Token
+            </summary>
+        </member>
+        <member name="P:FrameModel.TokenInfoModel.ExpiresIn">
+            <summary>
+            有效时间(S)
+            </summary>
+        </member>
+        <member name="P:FrameModel.TokenInfoModel.TokenType">
+            <summary>
+            Token类型
+            </summary>
+        </member>
+        <member name="P:FrameModel.TokenRequest.Name">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:FrameModel.TokenRequest.Pwd">
+            <summary>
+            密码
+            </summary>
+        </member>
+    </members>
+</doc>

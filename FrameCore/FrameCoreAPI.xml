@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FrameCoreAPI</name>
+    </assembly>
+    <members>
+        <member name="T:FrameCoreAPI.Controllers.FcBaseController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:FrameCoreAPI.Controllers.HomeController">
+            <summary>
+            Home
+            </summary>
+        </member>
+        <member name="M:FrameCoreAPI.Controllers.HomeController.TestAdd(System.String,System.String,System.Nullable{System.Double})">
+            <summary>
+            Redis添加数据
+            </summary>
+            <param name="key">键</param>
+            <param name="val">值</param>
+            <param name="expiry">过期时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:FrameCoreAPI.Controllers.HomeController.TestDel(System.String)">
+            <summary>
+            Redis删除数据
+            </summary>
+            <param name="key">键</param>
+            <returns></returns>
+        </member>
+        <member name="M:FrameCoreAPI.Controllers.HomeController.GetToken(FrameModel.TokenRequest)">
+            <summary>
+            获取Token
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FrameCoreAPI.Controllers.HomeController.GetComputingValidation">
+            <summary>
+            计算验证 -- 获取算式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FrameCoreAPI.Controllers.HomeController.IsComputingValidation(System.String)">
+            <summary>
+            判断验证码是否正确
+            </summary>
+            <param name="val">验证码</param>
+            <returns></returns>
+        </member>
+        <member name="M:FrameCoreAPI.Controllers.HomeController.ActionTestException(System.String)">
+            <summary>
+            测试异常
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FrameCoreAPI.Controllers.HomeController.ActionTest">
+            <summary>
+            测试方法
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:FrameCoreAPI.Controllers.TimingTaskController">
+            <summary>
+            定时任务控制器
+            </summary>
+        </member>
+        <member name="M:FrameCoreAPI.Controllers.TimingTaskController.CleanLog">
+            <summary>
+            清理日志
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:FrameCoreAPI.Controllers.WXApiController">
+            <summary>
+            微信接口
+            </summary>
+        </member>
+        <member name="M:FrameCoreAPI.Controllers.WXApiController.Inform(System.String)">
+            <summary>
+            模板通知
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FrameCoreAPI.Controllers.WXApiController.MPQRcodeSceneValue">
+            <summary>
+            获取临时场景二维码带场景值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FrameCoreAPI.Controllers.WXApiController.WXApiService">
+            <summary>
+            微信回调
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FrameCoreAPI.Controllers.WXApiController.WXApiOauthService(System.String,System.String)">
+            <summary>
+            微信获取用户信息的回调
+            </summary>
+            <param name="code">code作为换取access_token的票据</param>
+            <param name="state">重定向后会带上 state 参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:FrameCoreAPI.Controllers.WXApiController.GetOauthUrl">
+            <summary>
+            获取微信授权Url
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FrameCoreAPI.Startup.InitClobalConfigs">
+            <summary>
+            加载全局公共配置
+            </summary>
+        </member>
+    </members>
+</doc>
