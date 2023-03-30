@@ -1,5 +1,5 @@
 # 设置要使用的基础镜像
-FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build-env
+FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build-env
 
 # 在容器中创建一个工作目录
 WORKDIR /app
@@ -14,7 +14,7 @@ RUN dotnet restore
 RUN dotnet publish -c Release -o out
 
 # 将应用程序运行时设置为较小的运行时映像
-FROM mcr.microsoft.com/dotnet/runtime:6.0 AS runtime
+FROM mcr.microsoft.com/dotnet/runtime:5.0 AS runtime
 
 # 在容器中创建一个工作目录
 WORKDIR /app
