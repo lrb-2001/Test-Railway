@@ -17,10 +17,10 @@ RUN dotnet publish -c Release -o out
 FROM mcr.microsoft.com/dotnet/runtime:5.0 AS runtime
 
 # 在容器中创建一个工作目录
-WORKDIR /
+WORKDIR /app
 
 # 从之前的构建阶段中复制应用程序
-COPY --from=build-env /out .
+COPY --from=build-env /app/out .
 
 # 指定应用程序的启动命令
 ENTRYPOINT ["dotnet", "FrameCoreAPI.dll"]
