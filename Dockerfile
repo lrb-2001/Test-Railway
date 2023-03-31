@@ -5,4 +5,4 @@ FROM mcr.microsoft.com/dotnet/runtime:5.0 AS runtime
 WORKDIR /app
 
 # 指定应用程序的启动命令
-ENTRYPOINT ["dotnet", "OpenAIAPI.dll"]
+ENTRYPOINT ["dotnet", "OpenAI/OpenAIAPI.dll"]
