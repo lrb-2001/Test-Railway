@@ -28,6 +28,12 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:OpenAIAPI.Controllers.RobotController.CompletionsGPT3_5(OpenAIModel.Request.GPT3_5Model)">
+            <summary>
+            对话GPT3.5
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:OpenAIAPI.Controllers.RobotController.GetImage(OpenAIModel.Request.OpenAIReqImageModel)">
             <summary>
             图像

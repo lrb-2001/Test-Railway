@@ -34,6 +34,7 @@
       "OpenAIAPI/1.0.0": {
         "dependencies": {
           "AgileConfig.Client": "1.6.11",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
           "BaseCoreAPI": "1.0.0",
           "Ocelot": "17.0.1",
           "OpenAIIService": "1.0.0",
@@ -332,6 +333,35 @@
         },
         "compile": {
           "lib/netstandard2.0/AgileConfig.Client.dll": {}
+        }
+      },
+      "AutoMapper/12.0.0": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.7.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/AutoMapper.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.1/AutoMapper.dll": {}
+        }
+      },
+      "AutoMapper.Extensions.Microsoft.DependencyInjection/12.0.0": {
+        "dependencies": {
+          "AutoMapper": "12.0.0",
+          "Microsoft.Extensions.Options": "7.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
       "Consul/1.6.10.7": {
@@ -3687,6 +3717,20 @@
       "sha512": "sha512-YqMqLhtoKzEdreeBeYnj5dFwYhAp6/gcJzwgPE3AUJ2mQbE2FAdFwiCtTdvxqwshyhYzrfS7tOBIQjTjMrJkSA==",
       "path": "agileconfig.client/1.6.11",
       "hashPath": "agileconfig.client.1.6.11.nupkg.sha512"
+    },
+    "AutoMapper/12.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0Rmg0zI5AFu1O/y//o9VGyhxKjhggWpk9mOA1tp0DEVx40c61bs+lnQv+0jUq8XbniF7FKgIVvI1perqiMtLrA==",
+      "path": "automapper/12.0.0",
+      "hashPath": "automapper.12.0.0.nupkg.sha512"
+    },
+    "AutoMapper.Extensions.Microsoft.DependencyInjection/12.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XCJ4E3oKrbRl1qY9Mr+7uyC0xZj1+bqQjmQRWTiTKiVuuXTny+7YFWHi20tPjwkMukLbicN6yGlDy5PZ4wyi1w==",
+      "path": "automapper.extensions.microsoft.dependencyinjection/12.0.0",
+      "hashPath": "automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512"
     },
     "Consul/1.6.10.7": {
       "type": "package",

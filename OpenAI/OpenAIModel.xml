@@ -154,6 +154,16 @@
             页数
             </summary>
         </member>
+        <member name="P:OpenAIModel.Request.GPT3_5Model.role">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.Request.GPT3_5Model.content">
+            <summary>
+            内容
+            </summary>
+        </member>
         <member name="T:OpenAIModel.Request.OpenAIReqImageModel">
             <summary>
             OpenAI图片生成入参
@@ -182,6 +192,36 @@
         <member name="P:OpenAIModel.Request.OpenAIReqModel.Message">
             <summary>
             消息
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.Result.GPT3_5ResModel.id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.Result.GPT3_5ResModel.object">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.Result.GPT3_5ResModel.created">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.Result.GPT3_5ResModel.model">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.Result.GPT3_5ResModel.choices">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.Result.GPT3_5ResModel.usage">
+            <summary>
+            
             </summary>
         </member>
         <member name="P:OpenAIModel.Result.OpenAIResImageModel.created">
