@@ -1,0 +1,313 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OpenAIModel</name>
+    </assembly>
+    <members>
+        <member name="T:OpenAIModel.OpenAI_Img">
+            <summary>
+            OpenAI绘画表
+            </summary>
+        </member>
+        <member name="M:OpenAIModel.OpenAI_Img.#ctor">
+            <summary>
+            OpenAI绘画表
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.OpenAI_Img.ImgID">
+            <summary>
+            绘画ID
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.OpenAI_Img.ImgUser">
+            <summary>
+            绘画者
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.OpenAI_Img.ImgNumber">
+            <summary>
+            绘画数量
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.OpenAI_Img.ImgSize">
+            <summary>
+            绘画尺寸
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.OpenAI_Img.ImgDesc">
+            <summary>
+            绘画描述
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.OpenAI_Img.Imgs">
+            <summary>
+            图片地址
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.OpenAI_Img.CreateTime">
+            <summary>
+            绘画时间
+            </summary>
+        </member>
+        <member name="T:OpenAIModel.OpenAI_Msg">
+            <summary>
+            OpenAI消息类
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.OpenAI_Msg.MsgID">
+            <summary>
+            消息ID
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.OpenAI_Msg.CharType">
+            <summary>
+            消息模式
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.OpenAI_Msg.MsgType">
+            <summary>
+            消息类型
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.OpenAI_Msg.UserFrom">
+            <summary>
+            发送者
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.OpenAI_Msg.UserTo">
+            <summary>
+            接收者
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.OpenAI_Msg.Content">
+            <summary>
+            消息内容
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.OpenAI_Msg.IsSend">
+            <summary>
+            是否发送
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.OpenAI_Msg.IsRead">
+            <summary>
+            是否已读
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.OpenAI_Msg.IsToDel">
+            <summary>
+            接收者删除消息
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.OpenAI_Msg.IsFromDel">
+            <summary>
+            发送者删除消息
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.OpenAI_Msg.CreateDate">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.OpenAI_Msg.UUID">
+            <summary>
+            唯一标识
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.OpenAI_Msg.RoomId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.OpenAI_Msg.ReplyUUId">
+            <summary>
+            回复消息标识
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.Request.GetImgModel.ImgUser">
+            <summary>
+            用户
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.Request.GetImgModel.PageIndex">
+            <summary>
+            页码
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.Request.GetImgModel.PageSize">
+            <summary>
+            页数
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.Request.GetMsgModel.UserFrom">
+            <summary>
+            发送者
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.Request.GetMsgModel.PageIndex">
+            <summary>
+            页码
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.Request.GetMsgModel.PageSize">
+            <summary>
+            页数
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.Request.GPT3_5Model.role">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.Request.GPT3_5Model.content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="T:OpenAIModel.Request.OpenAIReqImageModel">
+            <summary>
+            OpenAI图片生成入参
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.Request.OpenAIReqImageModel.Prompt">
+            <summary>
+            生成图片的提示
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.Request.OpenAIReqImageModel.Number">
+            <summary>
+            生成图片的数量
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.Request.OpenAIReqImageModel.Size">
+            <summary>
+            生成图片的大小(默认1024x1024)
+            </summary>
+        </member>
+        <member name="T:OpenAIModel.Request.OpenAIReqModel">
+            <summary>
+            OpenAI对话入参
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.Request.OpenAIReqModel.Message">
+            <summary>
+            消息
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.Result.GPT3_5ResModel.id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.Result.GPT3_5ResModel.object">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.Result.GPT3_5ResModel.created">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.Result.GPT3_5ResModel.model">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.Result.GPT3_5ResModel.choices">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.Result.GPT3_5ResModel.usage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.Result.OpenAIResImageModel.created">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.Result.OpenAIResImageModel.data">
+            <summary>
+            图片集合
+            </summary>
+        </member>
+        <member name="T:OpenAIModel.Result.OpenAIImgageData">
+            <summary>
+            图片类
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.Result.OpenAIImgageData.url">
+            <summary>
+            图片路径
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.Result.OpenAIResModel.id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.Result.OpenAIResModel.object">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.Result.OpenAIResModel.created">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.Result.OpenAIResModel.model">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.Result.OpenAIResModel.choices">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.Result.OpenAIResModel.usage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.Result.ChoicesItem.text">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.Result.ChoicesItem.index">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.Result.ChoicesItem.logprobs">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.Result.ChoicesItem.finish_reason">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.Result.Usage.prompt_tokens">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.Result.Usage.completion_tokens">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:OpenAIModel.Result.Usage.total_tokens">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>
