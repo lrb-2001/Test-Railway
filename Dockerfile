@@ -17,8 +17,8 @@ WORKDIR /app
 COPY --from=build /app/out .
 
 # 暴露端口
-EXPOSE 80
-ENV ASPNETCORE_URLS=http://+:80
+# EXPOSE 80
+# ENV ASPNETCORE_URLS=http://+:80
 
 # 启动应用程序
 ENTRYPOINT ["dotnet", "RailwayTest.dll"]
