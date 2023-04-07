@@ -1,8 +1,24 @@
-# 将应用程序运行时设置为较小的运行时映像
-FROM mcr.microsoft.com/dotnet/runtime:5.0 AS runtime
+# 基于官方的 .NET 6 SDK 镜像构建
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 
-# 在容器中创建一个工作目录
+# 设置工作目录
 WORKDIR /app
 
-# 指定应用程序的启动命令
-ENTRYPOINT ["dotnet", "/app/OpenAIAPI.dll"]
+# 复制项目文件到工作目录中
+COPY . .
+
+# 使用 dotnet 命令还原依赖项并构建项目
+RUN dotnet restore
+RUN dotnet publish -c Release -o out
+
+# 构建运行时镜像
+FROM mcr.microsoft.com/dotnet/aspnet:6.0
+WORKDIR /app
+COPY --from=build /app/out .
+
+# 暴露端口
+EXPOSE 80
+ENV ASPNETCORE_URLS=http://+:80
+
+# 启动应用程序
+ENTRYPOINT ["dotnet", "RailwayTest.dll"]

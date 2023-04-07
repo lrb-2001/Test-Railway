@@ -1,0 +1,11 @@
+D:\工具\新建文件夹\FrameCoreAPI\FrameCoreAPI\RailwayTest\obj\Release\net6.0\PubTmp\Out\RailwayTest.exe
+D:\工具\新建文件夹\FrameCoreAPI\FrameCoreAPI\RailwayTest\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
+D:\工具\新建文件夹\FrameCoreAPI\FrameCoreAPI\RailwayTest\obj\Release\net6.0\PubTmp\Out\appsettings.json
+D:\工具\新建文件夹\FrameCoreAPI\FrameCoreAPI\RailwayTest\obj\Release\net6.0\PubTmp\Out\RailwayTest.dll
+D:\工具\新建文件夹\FrameCoreAPI\FrameCoreAPI\RailwayTest\obj\Release\net6.0\PubTmp\Out\RailwayTest.deps.json
+D:\工具\新建文件夹\FrameCoreAPI\FrameCoreAPI\RailwayTest\obj\Release\net6.0\PubTmp\Out\RailwayTest.runtimeconfig.json
+D:\工具\新建文件夹\FrameCoreAPI\FrameCoreAPI\RailwayTest\obj\Release\net6.0\PubTmp\Out\RailwayTest.pdb
+D:\工具\新建文件夹\FrameCoreAPI\FrameCoreAPI\RailwayTest\obj\Release\net6.0\PubTmp\Out\Microsoft.OpenApi.dll
+D:\工具\新建文件夹\FrameCoreAPI\FrameCoreAPI\RailwayTest\obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
+D:\工具\新建文件夹\FrameCoreAPI\FrameCoreAPI\RailwayTest\obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\工具\新建文件夹\FrameCoreAPI\FrameCoreAPI\RailwayTest\obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll
