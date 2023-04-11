@@ -7,16 +7,16 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["Module/01/FrameMiscellaneous/FrameMiscellaneous.csproj", "Module/01/FrameMiscellaneous/"]
-RUN dotnet restore "Module/01/FrameMiscellaneous/FrameMiscellaneous.csproj"
+COPY ["RailwayTest/RailwayTest.csproj", "RailwayTest/"]
+RUN dotnet restore "RailwayTest/RailwayTest.csproj"
 COPY . .
-WORKDIR "/src/Module/01/FrameMiscellaneous"
-RUN dotnet build "FrameMiscellaneous.csproj" -c Release -o /app/build
+WORKDIR "/src/RailwayTest"
+RUN dotnet build "RailwayTest.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "FrameMiscellaneous.csproj" -c Release -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "RailwayTest.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "FrameMiscellaneous.dll"]
+ENTRYPOINT ["dotnet", "RailwayTest.dll"]
