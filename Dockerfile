@@ -7,10 +7,10 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["Module/01/FrameMiscellaneous/FrameMiscellaneous.csproj", "Module/01/FrameMiscellaneous/"]
-RUN dotnet restore "Module/01/FrameMiscellaneous/FrameMiscellaneous.csproj"
+COPY ["FrameCore/Module/01/FrameMiscellaneous/FrameMiscellaneous.csproj", "FrameCore/Module/01/FrameMiscellaneous/"]
+RUN dotnet restore "FrameCore/Module/01/FrameMiscellaneous/FrameMiscellaneous.csproj"
 COPY . .
-WORKDIR "/src/Module/01/FrameMiscellaneous"
+WORKDIR "/src/FrameCore/Module/01/FrameMiscellaneous"
 RUN dotnet build "FrameMiscellaneous.csproj" -c Release -o /app/build
 
 FROM build AS publish
