@@ -1,0 +1,8 @@
+{
+  "Consul": {
+    "Address": "http://127.0.0.1:8500",
+    "CheckUrl": "/api/Health",
+    "DataCenter": "dc1",
+    "ServiceName": "Student2"
+  }
+}

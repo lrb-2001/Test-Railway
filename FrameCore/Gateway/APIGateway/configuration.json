@@ -1,0 +1,76 @@
+{
+  "GlobalConfiguration": {
+    "BaseUrl": "http://www.lrb.icu:9600",
+    "ServiceDiscoveryProvider": { // 提供服务发现的 Provider
+      "Scheme": "http",
+      "Host": "www.lrb.icu", // Consul 服务 host
+      "Port": 8500, // Consul 服务端口
+      "Type": "Consul" // 类型
+    }
+  },
+  "Routes": [ // 路由规则定义，数组
+    {
+      "DownstreamPathTemplate": "/Frame/api/{controller}/{action}", // 下游路径匹配模板
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [ // 下游服务的 host 和 port 设置，支持多实例
+        {
+          "Host": "1.15.63.248",
+          "Port": 8680
+        }
+      ],
+      "UpstreamPathTemplate": "/Frame/api/{controller}/{action}", //  客户端访问地址路径匹配模板
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Options" ], // 支持的 HttpMethod ，如：Get、Post、Put、Delete 等
+      "LoadBalancerOptions": { // 多实例下负载均衡方式，支持：LeastConnection（最闲）、RoundRobin（轮询）、NoLoadBalance
+        "Type": "RoundRobin"
+      },
+      "RateLimitOptions": { //限流
+        "ClientWhitelist": [], //限流白名单。如上，当请求头中包含 ClientId=clientId1 的请求则不受限流规则控制（ClientId key 名可修改）
+        "EnableRateLimiting": true, //开启限流
+        "Period": "5s", //限流控制时间段，也就是多长时间内。支持 s（秒）、m（分）、h（小时）、d（天）
+        "PeriodTimespan": 5, //超过限制次数后，需要等待的时长（秒）
+        "Limit": 5 // 在 Period 时长内最大访问次数
+      },
+      "QoSOptions": { //熔断
+        "ExceptionsAllowedBeforeBreaking": 3, //允许连续发生异常次数
+        "DurationOfBreak": 5000, //熔断时长（ms）
+        "TimeoutValue": 3000 //请求超时时间（ms）
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/swagger/frame/swagger.json", // 下游路径匹配模板
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [ // 下游服务的 host 和 port 设置，支持多实例
+        {
+          "Host": "1.15.63.248",
+          "Port": 8680
+        }
+      ],
+      "UpstreamPathTemplate": "/Frame/swagger/frame/swagger.json", //  客户端访问地址路径匹配模板
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Options" ] // 支持的 HttpMethod ，如：Get、Post、Put、Delete 等
+    },
+    {
+      "DownstreamPathTemplate": "/swagger/openAI/swagger.json", // 下游路径匹配模板
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [ // 下游服务的 host 和 port 设置，支持多实例
+        {
+          "Host": "localhost",
+          "Port": 8089
+        }
+      ],
+      "UpstreamPathTemplate": "/openAI/swagger/openAI/swagger.json", //  客户端访问地址路径匹配模板
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Options" ] // 支持的 HttpMethod ，如：Get、Post、Put、Delete 等
+    },
+    {
+      "DownstreamPathTemplate": "/OpenAI/api/{controller}/{action}", // 下游路径匹配模板
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [ // 下游服务的 host 和 port 设置，支持多实例
+        {
+          "Host": "localhost",
+          "Port": 8089
+        }
+      ],
+      "UpstreamPathTemplate": "/OpenAI/api/{controller}/{action}", //  客户端访问地址路径匹配模板
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Options" ] // 支持的 HttpMethod ，如：Get、Post、Put、Delete 等
+    }
+  ]
+}
