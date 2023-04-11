@@ -2,7 +2,6 @@
 
 FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
 WORKDIR /app
-EXPOSE 8080
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
@@ -21,4 +20,5 @@ COPY --from=publish /app/publish .
 
 ENV ENABLE_SWAGGER=true
 
+EXPOSE 80
 ENTRYPOINT ["dotnet", "RailwayTest.dll"]
