@@ -11,7 +11,6 @@ builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
 });
-builder.WebHost.UseUrls("https://[*]:7197");
 
 var app = builder.Build();
 // Configure the HTTP request pipeline.
