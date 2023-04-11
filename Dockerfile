@@ -7,16 +7,19 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["TestWeb/TestWeb.csproj", "TestWeb/"]
-RUN dotnet restore "TestWeb/TestWeb.csproj"
+COPY ["RailwayTest/RailwayTest.csproj", "RailwayTest/"]
+RUN dotnet restore "RailwayTest/RailwayTest.csproj"
 COPY . .
-WORKDIR "/src/TestWeb"
-RUN dotnet build "TestWeb.csproj" -c Release -o /app/build
+WORKDIR "/src/RailwayTest"
+RUN dotnet build "RailwayTest.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "TestWeb.csproj" -c Release -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "RailwayTest.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "TestWeb.dll"]
+
+ENV ENABLE_SWAGGER=true
+
+ENTRYPOINT ["dotnet", "RailwayTest.dll"]
