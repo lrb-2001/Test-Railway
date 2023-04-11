@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>D:\工具\新建文件夹\FrameCoreAPI\FrameCoreAPI\04.Railway\RailwayTest\bin\Release\net6.0\publish\</_PublishTargetUrl>
-    <History>True|2023-04-07T07:17:49.4585527Z;True|2023-04-07T15:08:33.2463534+08:00;True|2023-04-07T12:22:57.0789753+08:00;</History>
+    <History>True|2023-04-11T02:22:07.4382089Z;True|2023-04-11T10:18:37.4455696+08:00;True|2023-04-11T10:15:56.0517451+08:00;True|2023-04-11T10:12:53.2963749+08:00;True|2023-04-07T15:17:49.4585527+08:00;True|2023-04-07T15:08:33.2463534+08:00;True|2023-04-07T12:22:57.0789753+08:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>
