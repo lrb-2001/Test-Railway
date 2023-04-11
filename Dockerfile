@@ -20,7 +20,4 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 
-RAILWAY_APP_PORT=7777
-RAILWAY_APP_START_COMMAND="dotnet RailwayTest.dll"
-
 ENTRYPOINT ["dotnet", "RailwayTest.dll"]
