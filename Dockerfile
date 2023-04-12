@@ -22,4 +22,3 @@ COPY --from=publish /app/publish .
 ENV ENABLE_SWAGGER=true
 
 ENTRYPOINT ["dotnet", "RailwayTest.dll"]
-docker run -p 80:7197
