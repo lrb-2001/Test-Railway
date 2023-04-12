@@ -2,7 +2,7 @@
 
 FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
 WORKDIR /app
-EXPOSE 80
+EXPOSE 7197
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
@@ -22,3 +22,4 @@ COPY --from=publish /app/publish .
 ENV ENABLE_SWAGGER=true
 
 ENTRYPOINT ["dotnet", "RailwayTest.dll"]
+docker run -p 80:7197
