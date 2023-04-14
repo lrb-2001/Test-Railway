@@ -5,6 +5,8 @@ WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
+ADD railway-test.sh ./railway-test.sh
+
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
 COPY ["RailwayTest/RailwayTest.csproj", "RailwayTest/"]
