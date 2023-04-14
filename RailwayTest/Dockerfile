@@ -6,8 +6,8 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["RailwayTest/RailwayTest/RailwayTest.csproj", "RailwayTest/RailwayTest/"]
-RUN dotnet restore "RailwayTest/RailwayTest/RailwayTest.csproj"
+COPY ["RailwayTest/RailwayTest.csproj", "RailwayTest/"]
+RUN dotnet restore "RailwayTest/RailwayTest.csproj"
 COPY . .
 WORKDIR "/src/RailwayTest"
 RUN dotnet build "RailwayTest.csproj" -c Release -o /app/build
