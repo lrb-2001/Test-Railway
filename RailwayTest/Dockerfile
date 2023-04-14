@@ -6,10 +6,10 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["RailwayTest/RailwayTest.csproj", "RailwayTest/"]
-RUN dotnet restore "RailwayTest/RailwayTest.csproj"
+COPY ["src/RailwayTest/RailwayTest.csproj", "src/RailwayTest/"]
+RUN dotnet restore "src/RailwayTest/RailwayTest.csproj"
 COPY . .
-WORKDIR "/src/RailwayTest"
+WORKDIR "/src/src/RailwayTest"
 RUN dotnet build "RailwayTest.csproj" -c Release -o /app/build
 
 FROM build AS publish
@@ -19,3 +19,4 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "RailwayTest.dll"]
+#ENTRYPOINT ["/bin/sh", "./RailwayTest.sh"]
